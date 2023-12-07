@@ -1,0 +1,19 @@
+.myInput {
+    background: #3C3C3F;
+    color: white;
+    width: 98%;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin: 5px 0;
+    border: 1px solid #8e8e93;
+    border-radius: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;;
+}
+
+::placeholder{
+    color: #FFFFFF66;
+}
