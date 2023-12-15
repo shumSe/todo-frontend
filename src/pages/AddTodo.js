@@ -23,17 +23,12 @@ export default function AddTodo() {
         setIsValidated(valid)
     }
 
-    useEffect(() =>{
-        console.log("IS VALID " + isValidated)
-    },[isValidated])
-
     async function postData(){
         if(Object.keys(todo).length !== 0){
             const response = await HandleApi.addItem(todo)
             if(response.status === 200){
                 navigate('/')
             }
-            console.log("POSTDATA")
         }
     }
 

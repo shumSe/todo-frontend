@@ -30,21 +30,16 @@ export default function Home()  {
     const removeTodo = async (item) => {
         setTodoList(todoList.filter(p => p.id !== item.id))
         const response = await HandleApi.deleteItem(item.id)
-        if(response.status === 200){
-            console.log("DELETE COMPLETED")
-        }
     }
 
     const [selectedTodos, setSelectedTodos] = useState([])
 
     const addSelectedItem = (item) => {
         setSelectedTodos([...selectedTodos, item])
-        console.log("ADD SELECTED "+selectedTodos.length)
     }  
 
     const removeFromSelected = (item) => {
         setSelectedTodos(selectedTodos.filter((i => i !== item)))
-        console.log("REMOVE SELECTED "+selectedTodos.length)
     }
 
     const completeTodo = async (item) => {
@@ -59,14 +54,10 @@ export default function Home()  {
             )
         )
         const response = await HandleApi.updateItem(item.id, item)
-        if(response.status === 200){
-            console.log("UPDATE COMPLETED")
-        }
     }
 
     const deleteSelected = async (event) => {
         event.preventDefault()
-        console.log(selectedTodos)
         setTodoList(
             todoList.filter(p => !selectedTodos.includes(p.id))
         )

@@ -32,22 +32,15 @@ export default function EditTodo() {
             const response = await HandleApi.updateItem(location.state.id, todo)
             if(response.status === 200){
                 navigate('/')
-            }
-            console.log("PUTDATA")
-            
+            }            
         }
     }
-
 
     const [isValidated, setIsValidated] = useState(false)
     
     const setValidation = (valid) => {
         setIsValidated(valid)
     }
-
-    useEffect(() =>{
-        console.log("IS VALID " + isValidated)
-    },[isValidated])
 
     useEffect(() => {
         setIsValidated(false)

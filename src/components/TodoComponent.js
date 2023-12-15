@@ -6,7 +6,6 @@ import MyCheckbox from './UI/checkbox/MyCheckbox';
 import { Icon } from '@iconify/react';
 
 const TodoComponent = ({item, remove, complete, addSelectedItem, removeSelectedItem}) => {
-  // {text, tags, id}
   const navigate = useNavigate ()
   const deleteTodo = () => {
     remove(item)
